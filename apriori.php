@@ -213,20 +213,6 @@ foreach($aReviewedProducts as $i => $product_id_x)
 
         if($iNbReviewsOccurence >= $iNbReviewsMin_2ItemsSets || $iNbOwnersOccurence >= $iNbOwnersMin_2ItemsSets)
         {
-            /*
-            $oQuery = $oDb->select()
-               ->from('products', array('product_sName'))
-               ->join('productsManufacturers', 'productsManufacturers.product_id = products.product_id', array())
-               ->join('manufacturers', 'manufacturers.manufacturer_id = productsManufacturers.manufacturer_id', array('manufacturer_sName'))
-               ->where('products.product_id IN (?)', array($product_id_x, $product_id_y))
-               ->order('products.product_id');
-            $aProducts = $oDb->fetchAll($oQuery);
-
-            // noms produits
-            $sProductName1 = str_replace(';', ' ', $aProducts[0]->manufacturer_sName . ' ' . $aProducts[0]->product_sName);
-            $sProductName2 = str_replace(';', ' ', $aProducts[1]->manufacturer_sName . ' ' . $aProducts[1]->product_sName);
-            */
-
             // reviews confiance
             $iReviewConfidence1 = round($iNbReviewsOccurence * 100 / $aNbReviewsByProducts[$product_id_x]);
             $iReviewConfidence2 = round($iNbReviewsOccurence * 100 / $aNbReviewsByProducts[$product_id_y]);
