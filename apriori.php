@@ -1,6 +1,9 @@
 <?php
 /**
- * Calculate the marks given to the products
+* @author Grégoire Etot
+* @date 2012
+*
+* Calculate the marks given to the products
 */
 
 // No time limit !!!
